@@ -1,4 +1,5 @@
 import { ResumeIndex } from "./ResumeIndex";
+import { ResumeShow } from "./ResumeShow";
 
 const resumes = [
   {
@@ -63,6 +64,7 @@ export function Content() {
   return (
     <main>
       <ResumeIndex resumes={resumes} />
+      <ResumeShow resume={resumes} />
     </main>
   );
 }
