@@ -1,4 +1,8 @@
 import { ResumeIndex } from "./ResumeIndex";
+import { Routes, Route } from "react-router-dom";
+import { ResumeShow } from "./ResumeShow";
+import { useState } from "react";
+import { ResumeShowPage } from "./ResumeShowPage";
 
 const resumes = [
   {
@@ -57,12 +61,38 @@ const resumes = [
     githubURL: "https://github.com/alicejohnson",
     photo: "https://alicejohnson.com/photo.jpg",
   },
+  {
+    id: 5,
+    firstName: "Emily",
+    lastName: "Garcia",
+    email: "emily.garcia@example.com",
+    phoneNumber: "555-555-5555",
+    shortBio: "Graphic designer with a knack for creativity and attention to detail.",
+    linkedInURL: "https://www.linkedin.com/in/emilygarcia/",
+    twitterHandle: "@emilygfx",
+    personalBlogURL: "https://emilygarcia.design",
+    onlineResumeURL: "https://emilygarcia.design/resume",
+    githubURL: "https://github.com/emilygfx",
+    photo: "https://emilygarcia.design/photo.jpg",
+  },
 ];
 
 export function Content() {
+  const [isResumeShowVisible, setIsResumeShowVisible] = useState(false);
+  const [currentResume, setCurrentResume] = useState({});
+
+  const handleShowResume = (resume) => {
+    setIsResumeShowVisible(true);
+    setCurrentResume(resume);
+  };
   return (
     <main>
+      <Routes>
+        <Route path="/" element={<ResumeIndex resumes={resumes} onShowResume={handleShowResume} />} />
+        <Route path="resumes/:id" element={<ResumeShowPage />} />
+      </Routes>
       <ResumeIndex resumes={resumes} />
+      <ResumeShow resume={currentResume} />
     </main>
   );
 }

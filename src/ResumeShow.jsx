@@ -1,7 +1,7 @@
-export function Resumeshow() {
+export function ResumeShow() {
   return (
     <div>
-      <h1></h1>
+      <h1>Hello</h1>
     </div>
   );
 }

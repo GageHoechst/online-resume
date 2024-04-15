@@ -8,6 +8,7 @@ export function ResumeIndex(props) {
           <p>First Name: {resume.firstName}</p>
           <p>Last Name: {resume.lastName}</p>
           <p>About Me: {resume.shortBio}</p>
+          <button onClick={() => props.onShowResume(resume)}>More Info</button>
         </div>
       ))}
     </div>
