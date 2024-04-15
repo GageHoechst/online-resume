@@ -1,7 +1,9 @@
+import { ResumeIndex } from "./ResumeIndex";
+
 export function Content() {
   return (
     <main>
-      <h1>Welcome to React!</h1>
+      <ResumeIndex />
     </main>
   );
 }
