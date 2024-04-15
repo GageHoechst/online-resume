@@ -4,6 +4,7 @@ import { ResumeShow } from "./ResumeShow";
 import { useState } from "react";
 import { ResumeShowPage } from "./ResumeShowPage";
 
+
 const resumes = [
   {
     id: 1,
