@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 export function ResumeIndex(props) {
+
   return (
     <div>
       <h2>Students</h2>

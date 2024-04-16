@@ -81,6 +81,14 @@ export function Content() {
   const [isResumeShowVisible, setIsResumeShowVisible] = useState(false);
   const [currentResume, setCurrentResume] = useState({});
 
+  const handleIndexResumes = () => {
+    console.log("handleIndexResumes");
+    axios.get("http://localhost:3000/resumes.json").then((response) => {
+      console.log(response.data);
+      setResumes(response.data)
+    });
+  };
+
   const handleShowResume = (resume) => {
     console.log("handleShowResume", resume);
     setIsResumeShowVisible(true);
