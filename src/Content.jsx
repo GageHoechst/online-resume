@@ -85,7 +85,7 @@ export function Content() {
     console.log("handleIndexResumes");
     axios.get("http://localhost:3000/resumes.json").then((response) => {
       console.log(response.data);
-      setResumes(response.data)
+      setResumes(response.data);
     });
   };
 
@@ -98,7 +98,7 @@ export function Content() {
     <main>
       <Routes>
         <Route path="/" element={<ResumeIndex resumes={resumes} onShowResume={handleShowResume} />} />
-        <Route path="resumes/:id" element={<ResumeShowPage />} />
+        <Route path="resumes/:id" element={<ResumeShowPage resume={currentResume} />} />
       </Routes>
       {/* <ResumeShow resumes={currentResume} show={isResumeShowVisible} /> */}
     </main>
