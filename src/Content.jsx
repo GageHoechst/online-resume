@@ -91,8 +91,7 @@ export function Content() {
         <Route path="/" element={<ResumeIndex resumes={resumes} onShowResume={handleShowResume} />} />
         <Route path="resumes/:id" element={<ResumeShowPage />} />
       </Routes>
-      <ResumeIndex resumes={resumes} />
-      <ResumeShow resume={currentResume} />
+      <ResumeShow resumes={currentResume} show={isResumeShowVisible} />
     </main>
   );
 }
