@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 export function ResumeIndex(props) {
+
   return (
     <div>
       <h2>Students</h2>
