@@ -15,11 +15,11 @@ export function ResumeShowPage() {
   useEffect(handleShowResume, []);
 
   return (
-    <div>
-      <h1>Product Info</h1>
-      <p>Name: {resume.name}</p>
-      <p>Price: {resume.price}</p>
-      <p>Description: {resume.description}</p>
+    <div id="resumes-show">
+      <h1>Resume Info</h1>
+      <p>First: {resume.firstName}</p>
+      <p>Last: {resume.lastName}</p>
+      <p>Short Bio: {resume.shortBio}</p>
     </div>
   );
 }
