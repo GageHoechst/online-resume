@@ -6,10 +6,10 @@ export function ResumeShowPage() {
   const [resume, setResume] = useState({});
   const params = useParams();
 
-  const handleShowResume = () => {
-    axios.get(`http://localhost:3000/resumes/${params.id}.json`).then((response) => {
-      setResume(response.data);
-    });
+  const handleShowResume = (props) => {
+    // axios.get(`http://localhost:3000/resumes/${params.id}.json`).then((response) => {
+    //   setResume(response.data);
+    // });
   };
 
   useEffect(handleShowResume, []);

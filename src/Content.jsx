@@ -82,6 +82,7 @@ export function Content() {
   const [currentResume, setCurrentResume] = useState({});
 
   const handleShowResume = (resume) => {
+    console.log("handleShowResume", resume);
     setIsResumeShowVisible(true);
     setCurrentResume(resume);
   };
@@ -91,7 +92,7 @@ export function Content() {
         <Route path="/" element={<ResumeIndex resumes={resumes} onShowResume={handleShowResume} />} />
         <Route path="resumes/:id" element={<ResumeShowPage />} />
       </Routes>
-      <ResumeShow resumes={currentResume} show={isResumeShowVisible} />
+      {/* <ResumeShow resumes={currentResume} show={isResumeShowVisible} /> */}
     </main>
   );
 }
